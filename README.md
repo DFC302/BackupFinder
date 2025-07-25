@@ -155,6 +155,9 @@ backupfinder -u https://admin.microsoft.com --silent | ffuf -w /dev/stdin -u htt
 ffuf -w patterns.txt -u https://admin.microsoft.com/FUZZ -mc 200,403,500 -fc 404 -t 50 -o results.txt
 ```
 
+<img width="1510" height="732" alt="image" src="https://github.com/user-attachments/assets/9a66801b-80e7-49b7-a8ae-fda677a50114" />
+
+
 ---
 
 ## Integration
