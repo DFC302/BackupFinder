@@ -68,17 +68,6 @@ sudo mv backupfinder /usr/local/bin/
 backupfinder version
 
 # Verify assets are embedded  
-## Special Thanks
-
-This project is inspired by and integrates with the following amazing open-source tools:
-
-- [ffuf](https://github.com/ffuf/ffuf.git) — Fast web fuzzer
-- [ProjectDiscovery](https://github.com/projectdiscovery) — Security automation tools
-  - [subfinder](https://github.com/projectdiscovery/subfinder.git) — Subdomain discovery
-  - [httpx](https://github.com/projectdiscovery/httpx.git) — HTTP probing
-
-Thank you to the authors and maintainers of these projects for their contributions to the security community!
-
 backupfinder health-check
 
 # Quick test
