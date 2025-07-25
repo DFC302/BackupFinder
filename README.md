@@ -10,39 +10,179 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 ---
 
-## Usage
+## Installation
+
+### Install via Go (Recommended)
 
 ```bash
-backupfinder -u <target>            # Scan single target
-backupfinder -l <file>              # Scan multiple targets from file
-backupfinder -u <target> -w         # Use wordlist mode (9000+ patterns)
-backupfinder -u <target> -je <file> # Export to JSON
-backupfinder -help                  # Show this help
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```
 
-### Quick Options
+### Manual Installation
 
-- `-u`       Target URL/domain to scan
-- `-l`       File with target list
-- `-w`       Wordlist mode (comprehensive patterns)
-- `-o`       Output file
-- `-je`      JSON export
-- `-silent`  Show only results
-- `-v`       Verbose mode
+```bash
+git clone https://github.com/MuhammadWaseem29/BackupFinder.git
+cd BackupFinder
+go build -o backupfinder cmd/backupfinder/main.go
+```
 
 ---
 
-## Benefits
+## Usage
 
-✅ 9000+ backup patterns in wordlist mode  
-✅ Smart domain parsing and combinations  
-✅ Professional JSON export for automation  
-✅ Real-time statistics (default enabled)  
-✅ Beautiful colorized output  
-✅ Perfect for pentesting and bug bounty
+```
+Usage:
+  backupfinder [flags]
+
+Flags:
+INPUT:
+  -u, -target string       target URL/domain to scan
+  -l, -list string         file containing list of targets
+
+PATTERNS:
+  -w, -wordlist            use wordlist mode (comprehensive 1900+ patterns)
+  -e, -extensions string   custom extensions file
+
+OUTPUT:
+  -o, -output string       file to write output to
+      -je string           export to JSON file
+      -json                JSON output format
+      -silent              show only results
+  -v, -verbose             verbose mode
+
+PERFORMANCE:
+  -c, -concurrency int     number of concurrent workers (default 10)
+      -rate-limit int      rate limit for requests (default 50)
+      -timeout int         request timeout in seconds (default 30)
+      -retries int         maximum number of retries (default 3)
+
+CONFIGURATION:
+      -no-color            disable colored output
+      -timestamp           add timestamps to output
+      -stats               show statistics (default true)
+      -store-resp          store responses
+      -store-resp-dir      response storage directory (default "responses")
+
+COMMANDS:
+  version                  show version information
+  health-check             verify installation and assets
+  templates                list available pattern templates
+  help                     show this help message
+```
+
+---
+
+## Examples
+
+### Basic Usage
+```bash
+backupfinder -u https://example.com
+backupfinder -u https://dev.apple.com --silent
+backupfinder -l targets.txt
+```
+
+### Pattern Generation
+```bash
+backupfinder -u https://dev.apple.com -w
+backupfinder -u https://dev.apple.com --silent > patterns.txt
+backupfinder -u https://dev.apple.com -w --silent > comp.txt
+```
+
+### Output Formats
+```bash
+backupfinder -u https://dev.apple.com -o output.txt
+backupfinder -u https://dev.apple.com -v
+backupfinder -u https://dev.apple.com --silent
+```
+
+### FFUF Integration
+```bash
+backupfinder -u https://dev.apple.com --silent | ffuf -w /dev/stdin -u https://dev.apple.com/FUZZ -mc 200,403,500 -t 50
+ffuf -w patterns.txt -u https://dev.apple.com/FUZZ -mc 200,403,500 -fc 404 -t 50 -o results.txt
+```
+
+---
+
+## Integration
+
+### Complete Bug Bounty Workflow
+```bash
+# Find subdomains
+subfinder -d apple.com -silent > subdomains.txt
+
+# Check live targets
+cat subdomains.txt | httpx -silent > live_subdomains.txt
+
+# Generate patterns for all subdomains
+cat live_subdomains.txt | while read url; do 
+    backupfinder -u "$url" --silent >> all_patterns.txt
+done
+
+# Scan with ffuf
+cat live_subdomains.txt | while read url; do 
+    backupfinder -u "$url" --silent | ffuf -w /dev/stdin -u "$url/FUZZ" -mc 200,403,500 -fc 404 -t 50 > results.txt
+done
+```
+
+### Direct Piping
+```bash
+backupfinder -u https://dev.apple.com --silent | ffuf -w /dev/stdin -u https://dev.apple.com/FUZZ
+backupfinder -u https://dev.apple.com --silent | httpx -status-code
+```
+
+### Automation Pipeline
+```bash
+subfinder -d apple.com -silent | httpx -silent | head -5 | while read url; do 
+    backupfinder -u "$url" -w --silent | ffuf -w /dev/stdin -u "$url/FUZZ" -mc 200,403,500 -fc 404 -t 50
+done
+```
+
+### Multiple Targets
+```bash
+echo -e "https://dev.apple.com\nhttps://api.apple.com" | while read url; do 
+    backupfinder -u "$url" --silent | ffuf -w /dev/stdin -u "$url/FUZZ" -mc 200,403,500 -t 30
+done
+```
+
+---
+
+## Features
+
+- 9000+ backup patterns in wordlist mode
+- Smart subdomain handling (admin.example.com → admin.zip, admin-example.sql)  
+- Professional JSON export for automation
+- Real-time statistics with performance metrics
+- Concurrent processing for fast pattern generation
+- Custom wordlists support
+- Silent mode for integration with other tools
+
+---
+
+## Pattern Types
+
+### Extension Mode (Default - 92 patterns)
+Common backup extensions: `.bak`, `.backup`, `.old`, `.sql`, `.zip`, etc.
+
+### Wordlist Mode (-w - 1900+ patterns)  
+Comprehensive patterns for database dumps, configuration backups, archive variants
+
+### Custom Extensions (-e)
+Use your own pattern file (one pattern per line, supports `#` comments)
+
+---
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## Author
+
+**MuhammadWaseem**  
+GitHub: [@MuhammadWaseem29](https://github.com/MuhammadWaseem29)  
+Tool: BackupFinder v2.0.0
 
 ---
 
 May you be well on your side of the screen :)
-
----
