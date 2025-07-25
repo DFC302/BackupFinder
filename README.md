@@ -15,7 +15,19 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 ### Install via Go (Recommended)
 
 ```bash
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
+# Latest stable version
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
+
+# Or use latest main branch
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@main
+```
+
+### If Installation Fails
+
+```bash
+# Clear Go cache and retry
+go clean -modcache
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
 ```
 
 ### Manual Installation
@@ -23,7 +35,21 @@ go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```bash
 git clone https://github.com/MuhammadWaseem29/BackupFinder.git
 cd BackupFinder
-go build -o backupfinder cmd/backupfinder/main.go
+go build -o backupfinder ./cmd/backupfinder/
+sudo mv backupfinder /usr/local/bin/
+```
+
+### Verify Installation
+
+```bash
+# Check version
+backupfinder version
+
+# Verify assets are embedded  
+backupfinder health-check
+
+# Quick test
+backupfinder -u https://example.com --silent | head -3
 ```
 
 ---
@@ -76,23 +102,36 @@ COMMANDS:
 
 ### Basic Usage
 ```bash
-backupfinder -u https://example.com
-backupfinder -u https://dev.apple.com --silent
+# Basic scan (92 extension patterns)
+backupfinder -u https://dev.apple.com
+
+# Comprehensive scan (1907 wordlist patterns)  
+backupfinder -u https://dev.apple.com -w
+
+# Multiple targets
 backupfinder -l targets.txt
 ```
 
 ### Pattern Generation
 ```bash
-backupfinder -u https://dev.apple.com -w
-backupfinder -u https://dev.apple.com --silent > patterns.txt
-backupfinder -u https://dev.apple.com -w --silent > comp.txt
+# Generate patterns silently for piping
+backupfinder -u https://dev.apple.com --silent
+backupfinder -u https://dev.apple.com -w --silent 
+
+# Save to file
+backupfinder -u https://dev.apple.com -w -o patterns.txt
 ```
 
 ### Output Formats
 ```bash
-backupfinder -u https://dev.apple.com -o output.txt
-backupfinder -u https://dev.apple.com -v
-backupfinder -u https://dev.apple.com --silent
+# Verbose mode with statistics
+backupfinder -u https://dev.apple.com -w -v
+
+# JSON export
+backupfinder -u https://dev.apple.com -w --json -o results.json
+
+# Silent mode (perfect for automation)
+backupfinder -u https://dev.apple.com -w --silent
 ```
 
 ### FFUF Integration
