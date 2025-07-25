@@ -110,8 +110,17 @@ COMMANDS:
 # Basic scan (92 extension patterns)
 backupfinder -u https://admin.microsoft.com
 
+
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/9d208507-f1b5-42d9-8bb5-859902523505" />
+
+
+
 # Comprehensive scan (1907 wordlist patterns)  
 backupfinder -u https://admin.microsoft.com -w
+
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/4d4003f6-a6b8-4dbf-8bf3-327c18875be8" />
+
+
 
 # Multiple targets
 backupfinder -l targets.txt
