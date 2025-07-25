@@ -34,6 +34,16 @@ go clean -modcache
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```
 
+### Alternative Installation Methods
+
+```bash
+# Use specific version
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.0
+
+# Use main branch  
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@main
+```
+
 ### Manual Installation
 
 ```bash
@@ -186,6 +196,22 @@ echo -e "https://dev.apple.com\nhttps://api.apple.com" | while read url; do
     backupfinder -u "$url" --silent | ffuf -w /dev/stdin -u "$url/FUZZ" -mc 200,403,500 -t 30
 done
 ```
+
+---
+
+## Troubleshooting
+
+### Common Installation Issues
+
+1. **"module contains a go.mod file" error**: Use `@latest` or `@v1.0.0`, NOT `@v2.x.x`
+2. **"package not found" error**: Run `go clean -modcache` first
+3. **Permission denied**: Use `sudo` for system-wide installation
+
+### Getting Help
+
+- 🐛 **Issues**: [GitHub Issues](https://github.com/MuhammadWaseem29/BackupFinder/issues)
+- 📚 **Documentation**: This README
+- 💬 **Discussions**: [GitHub Discussions](https://github.com/MuhammadWaseem29/BackupFinder/discussions)
 
 ---
 
