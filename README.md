@@ -16,11 +16,11 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 ```bash
 # Use specific version tag (RECOMMENDED)
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.2
 
 # If above fails, clear cache first
 go clean -modcache
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.2
 
 # Or use latest main branch
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@main
@@ -38,7 +38,7 @@ go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```bash
 # Clear Go cache and retry with specific version
 go clean -modcache
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.2
 
 # Alternative: Use commit hash directly
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@0926726
