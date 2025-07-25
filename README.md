@@ -16,10 +16,12 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 ## Special Thanks ❤️
 
+
 Thanks to everyone who made this tool possible:
 
 - [@infosec_au](https://x.com/infosec_au) for wordlists ([wordlists.assetnote.io](https://wordlists.assetnote.io/))
 - [@coffinxp7](https://x.com/coffinxp7) for inspiration and support
+- [@GodfatherOrwa](https://x.com/GodfatherOrwa) for support
 - [ffuf](https://github.com/ffuf/ffuf.git) — Fast web fuzzer
 - [ProjectDiscovery](https://github.com/projectdiscovery) — Security automation tools
   - [subfinder](https://github.com/projectdiscovery/subfinder.git) — Subdomain discovery
