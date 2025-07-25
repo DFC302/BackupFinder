@@ -10,38 +10,28 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 ---
 
+## Requirements
+
+- Go 1.21 or higher
+- Internet connection for installation
+
+---
+
 ## Installation
 
 ### Install via Go (Recommended)
 
 ```bash
-# Use specific version tag (RECOMMENDED)
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.2
-
-# If above fails, clear cache first
-go clean -modcache
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.2
-
-# Or use latest main branch
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@main
-```
-
-### ⚠️ Do NOT use @latest (Known Issue)
-
-```bash
-# ❌ This will fail due to Go cache issues
+# Simple one-command installation
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```
 
-### If Installation Still Fails
+### If Installation Fails
 
 ```bash
-# Clear Go cache and retry with specific version
+# Clear cache and retry
 go clean -modcache
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.2
-
-# Alternative: Use commit hash directly
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@0926726
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```
 
 ### Manual Installation
@@ -220,7 +210,7 @@ Common backup extensions: `.bak`, `.backup`, `.old`, `.sql`, `.zip`, etc.
 Comprehensive patterns for database dumps, configuration backups, archive variants
 
 ### Custom Extensions (-e)
-Use your own pattern file (one pattern per lines,, supports `#` comments)
+Use your own pattern file (one pattern per line, supports `#` comments)
 
 ---
 
@@ -234,7 +224,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **MuhammadWaseem**  
 GitHub: [@MuhammadWaseem29](https://github.com/MuhammadWaseem29)  
-Tool: BackupFinder v2.0.1
+Tool: BackupFinder v1.0.0
 
 ---
 
