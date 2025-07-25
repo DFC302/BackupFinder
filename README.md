@@ -22,8 +22,8 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 ### Install via Go (Recommended)
 
 ```bash
-# Simple one-command installation
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
+# One-command install (always works)
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
 ```
 
 ### If Installation Fails
@@ -31,7 +31,7 @@ go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
 ```bash
 # Clear cache and retry
 go clean -modcache
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
 ```
 
 ### Alternative Installation Methods
