@@ -252,6 +252,10 @@ Comprehensive patterns for database dumps, configuration backups, archive varian
 ### Custom Extensions (-e)
 Use your own pattern file (one pattern per line, supports `#` comments)
 
+
+<img width="1510" height="732" alt="image" src="https://github.com/user-attachments/assets/ac02078f-e228-4a11-ba33-5a10f9e08aa5" />
+
+
 ---
 
 ## License
