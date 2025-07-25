@@ -177,7 +177,7 @@ ffuf -w patterns.txt -u https://admin.microsoft.com/FUZZ -mc 200,403,500 -fc 404
 
 ---
 
-## Integration
+## Integration 😊
 
 ### Complete Bug Bounty Workflow
 ```bash
@@ -279,7 +279,7 @@ Tool: BackupFinder v1.0.0
 
 ---
 
- Thank you for using BackupFinder! We appreciate your support!❤️
+ Thank you for using BackupFinder! We appreciate your support! ❤️
 
 ---
 
