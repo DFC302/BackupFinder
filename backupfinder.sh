@@ -129,14 +129,6 @@ Quick Options:
   -silent  Show only results
   -v       Verbose mode
 
-Benefits:
-✅ 9000+ backup patterns in wordlist mode
-✅ Smart domain parsing and combinations  
-✅ Professional JSON export for automation
-✅ Real-time statistics (default enabled)
-✅ Beautiful colorized output
-✅ Perfect for pentesting and bug bounty
-
 May you be well on your side of the screen :)
 
 EOF
