@@ -239,6 +239,10 @@ done
 - Custom wordlists support
 - Silent mode for integration with other tools
 
+<img width="1510" height="732" alt="image" src="https://github.com/user-attachments/assets/ac02078f-e228-4a11-ba33-5a10f9e08aa5" />
+
+
+
 ---
 
 ## Pattern Types
@@ -253,7 +257,6 @@ Comprehensive patterns for database dumps, configuration backups, archive varian
 Use your own pattern file (one pattern per line, supports `#` comments)
 
 
-<img width="1510" height="732" alt="image" src="https://github.com/user-attachments/assets/ac02078f-e228-4a11-ba33-5a10f9e08aa5" />
 
 
 ---
