@@ -15,19 +15,33 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 ### Install via Go (Recommended)
 
 ```bash
-# Latest stable version
+# Use specific version tag (RECOMMENDED)
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
+
+# If above fails, clear cache first
+go clean -modcache
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
 
 # Or use latest main branch
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@main
 ```
 
-### If Installation Fails
+### ⚠️ Do NOT use @latest (Known Issue)
 
 ```bash
-# Clear Go cache and retry
+# ❌ This will fail due to Go cache issues
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@latest
+```
+
+### If Installation Still Fails
+
+```bash
+# Clear Go cache and retry with specific version
 go clean -modcache
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v2.0.1
+
+# Alternative: Use commit hash directly
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@0926726
 ```
 
 ### Manual Installation
@@ -220,7 +234,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 **MuhammadWaseem**  
 GitHub: [@MuhammadWaseem29](https://github.com/MuhammadWaseem29)  
-Tool: BackupFinder v2.0.0
+Tool: BackupFinder v2.0.1
 
 ---
 
