@@ -26,13 +26,13 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 ##  Latest Install Command (Recommended)
 
 ```bash
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.2
 ```
 
 ## Installation
 
 ```bash
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
+go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.2
 ```
 
 ### Manual Installation
