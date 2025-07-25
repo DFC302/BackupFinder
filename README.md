@@ -108,10 +108,10 @@ COMMANDS:
 ### Basic Usage
 ```bash
 # Basic scan (92 extension patterns)
-backupfinder -u https://dev.apple.com
+backupfinder -u https://admin.microsoft.com
 
 # Comprehensive scan (1907 wordlist patterns)  
-backupfinder -u https://dev.apple.com -w
+backupfinder -u https://admin.microsoft.com -w
 
 # Multiple targets
 backupfinder -l targets.txt
@@ -120,29 +120,29 @@ backupfinder -l targets.txt
 ### Pattern Generation
 ```bash
 # Generate patterns silently for piping
-backupfinder -u https://dev.apple.com --silent
-backupfinder -u https://dev.apple.com -w --silent 
+backupfinder -u https://admin.microsoft.com --silent
+backupfinder -u https://admin.microsoft.com -w --silent 
 
 # Save to file
-backupfinder -u https://dev.apple.com -w -o patterns.txt
+backupfinder -u https://admin.microsoft.com -w -o patterns.txt
 ```
 
 ### Output Formats
 ```bash
 # Verbose mode with statistics
-backupfinder -u https://dev.apple.com -w -v
+backupfinder -u https://admin.microsoft.com -w -v
 
 # JSON export
-backupfinder -u https://dev.apple.com -w --json -o results.json
+backupfinder -u https://admin.microsoft.com -w --json -o results.json
 
 # Silent mode (perfect for automation)
-backupfinder -u https://dev.apple.com -w --silent
+backupfinder -u https://admin.microsoft.com -w --silent
 ```
 
 ### FFUF Integration
 ```bash
-backupfinder -u https://dev.apple.com --silent | ffuf -w /dev/stdin -u https://dev.apple.com/FUZZ -mc 200,403,500 -t 50
-ffuf -w patterns.txt -u https://dev.apple.com/FUZZ -mc 200,403,500 -fc 404 -t 50 -o results.txt
+backupfinder -u https://admin.microsoft.com --silent | ffuf -w /dev/stdin -u https://admin.microsoft.com/FUZZ -mc 200,403,500 -t 50
+ffuf -w patterns.txt -u https://admin.microsoft.com/FUZZ -mc 200,403,500 -fc 404 -t 50 -o results.txt
 ```
 
 ---
@@ -152,7 +152,7 @@ ffuf -w patterns.txt -u https://dev.apple.com/FUZZ -mc 200,403,500 -fc 404 -t 50
 ### Complete Bug Bounty Workflow
 ```bash
 # Find subdomains
-subfinder -d apple.com -silent > subdomains.txt
+subfinder -d microsoft.com -silent > subdomains.txt
 
 # Check live targets
 cat subdomains.txt | httpx -silent > live_subdomains.txt
@@ -170,20 +170,20 @@ done
 
 ### Direct Piping
 ```bash
-backupfinder -u https://dev.apple.com --silent | ffuf -w /dev/stdin -u https://dev.apple.com/FUZZ
-backupfinder -u https://dev.apple.com --silent | httpx -status-code
+backupfinder -u https://admin.microsoft.com --silent | ffuf -w /dev/stdin -u https://admin.microsoft.com/FUZZ
+backupfinder -u https://admin.microsoft.com --silent | httpx -status-code
 ```
 
 ### Automation Pipeline
 ```bash
-subfinder -d apple.com -silent | httpx -silent | head -5 | while read url; do 
+subfinder -d microsoft.com -silent | httpx -silent | head -5 | while read url; do 
     backupfinder -u "$url" -w --silent | ffuf -w /dev/stdin -u "$url/FUZZ" -mc 200,403,500 -fc 404 -t 50
 done
 ```
 
 ### Multiple Targets
 ```bash
-echo -e "https://dev.apple.com\nhttps://api.apple.com" | while read url; do 
+echo -e "https://admin.microsoft.com\nhttps://api.microsoft.com" | while read url; do 
     backupfinder -u "$url" --silent | ffuf -w /dev/stdin -u "$url/FUZZ" -mc 200,403,500 -t 30
 done
 ```
