@@ -12,7 +12,7 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 ## Some Results 
 
-<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/5647fcd8-91e5-474c-9752-ac479d586e38" />
+<img width="1512" height="982" alt="Screenshot 2025-07-26 at 3 20 51 AM" src="https://github.com/user-attachments/assets/2d12d61f-7747-4319-bd3a-885f68e39fb7" />
 
 
 ## Requirements
