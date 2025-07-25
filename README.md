@@ -230,9 +230,9 @@ done
 
 ### Getting Help
 
-- 🐛 **Issues**: [GitHub Issues](https://github.com/MuhammadWaseem29/BackupFinder/issues)
-- 📚 **Documentation**: This README
-- 💬 **Discussions**: [GitHub Discussions](https://github.com/MuhammadWaseem29/BackupFinder/discussions)
+-  **Issues**: [GitHub Issues](https://github.com/MuhammadWaseem29/BackupFinder/issues)
+-  **Documentation**: This README
+-  **Discussions**: [GitHub Discussions](https://github.com/MuhammadWaseem29/BackupFinder/discussions)
 
 ---
 
@@ -275,7 +275,7 @@ Tool: BackupFinder v1.0.0
 
 ---
 
-❤️ Thank you for using BackupFinder! We appreciate your support!
+ Thank you for using BackupFinder! We appreciate your support!❤️
 
 ---
 
@@ -285,13 +285,3 @@ May you be well on your side of the screen :)
 
 ---
 
-## Special Thanks
-
-This project is inspired by and integrates with the following amazing open-source tools:
-
-- [ffuf](https://github.com/ffuf/ffuf.git) — Fast web fuzzer
-- [ProjectDiscovery](https://github.com/projectdiscovery) — Security automation tools
-  - [subfinder](https://github.com/projectdiscovery/subfinder.git) — Subdomain discovery
-  - [httpx](https://github.com/projectdiscovery/httpx.git) — HTTP probing
-
-Thank you to the authors and maintainers of these projects for their contributions to the security community!
