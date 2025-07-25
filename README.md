@@ -10,6 +10,11 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 ---
 
+## Some Results 
+
+<img width="3024" height="1964" alt="image" src="https://github.com/user-attachments/assets/5647fcd8-91e5-474c-9752-ac479d586e38" />
+
+
 ## Requirements
 
 - Go 1.21 or higher
