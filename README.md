@@ -220,13 +220,6 @@ done
 
 ---
 
-## Troubleshooting
-
-### Common Installation Issues
-
-1. **"module contains a go.mod file" error**: Use `@latest` or `@v1.0.0`, NOT `@v2.x.x`
-2. **"package not found" error**: Run `go clean -modcache` first
-3. **Permission denied**: Use `sudo` for system-wide installation
 
 ### Getting Help
 
