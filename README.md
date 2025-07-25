@@ -167,7 +167,7 @@ Common backup extensions: `.bak`, `.backup`, `.old`, `.sql`, `.zip`, etc.
 Comprehensive patterns for database dumps, configuration backups, archive variants
 
 ### Custom Extensions (-e)
-Use your own pattern file (one pattern per line, supports `#` comments)
+Use your own pattern file (one pattern per lines,, supports `#` comments)
 
 ---
 
