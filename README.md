@@ -220,12 +220,8 @@ done
 
 ---
 
+<img width="1510" height="982" alt="image" src="https://github.com/user-attachments/assets/ee07492e-20ad-4c4a-8690-9c19de9226be" />
 
-### Getting Help
-
--  **Issues**: [GitHub Issues](https://github.com/MuhammadWaseem29/BackupFinder/issues)
--  **Documentation**: This README
--  **Discussions**: [GitHub Discussions](https://github.com/MuhammadWaseem29/BackupFinder/discussions)
 
 ---
 
@@ -266,6 +262,14 @@ Use your own pattern file (one pattern per line, supports `#` comments)
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+
+### Getting Help
+
+-  **Issues**: [GitHub Issues](https://github.com/MuhammadWaseem29/BackupFinder/issues)
+-  **Documentation**: This README
+-  **Discussions**: [GitHub Discussions](https://github.com/MuhammadWaseem29/BackupFinder/discussions)
+
 
 ## Author
 
