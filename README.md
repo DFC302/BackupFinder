@@ -26,29 +26,8 @@ go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
 
 ## Installation
 
-### Install via Go (Recommended)
-
 ```bash
-# One-command install (always works)
 go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
-```
-
-### If Installation Fails
-
-```bash
-# Clear cache and retry
-go clean -modcache
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.1
-```
-
-### Alternative Installation Methods
-
-```bash
-# Use specific version
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@v1.0.0
-
-# Use main branch  
-go install github.com/MuhammadWaseem29/BackupFinder/cmd/backupfinder@main
 ```
 
 ### Manual Installation
