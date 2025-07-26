@@ -298,12 +298,9 @@ May you be well on your side of the screen :)
 
 ## Star History
 
+
 <a href="https://star-history.com/#MuhammadWaseem29/BackupFinder&Date">
- <picture>
-   <source media="(prefers-color-scheme: dark)" srcset="https://api.star-history.com/svg?repos=MuhammadWaseem29/BackupFinder&type=Date&theme=dark" />
-   <source media="(prefers-color-scheme: light)" srcset="https://api.star-history.com/svg?repos=MuhammadWaseem29/BackupFinder&type=Date" />
-   <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MuhammadWaseem29/BackupFinder&type=Date" />
- </picture>
+  <img alt="Star History Chart" src="https://api.star-history.com/svg?repos=MuhammadWaseem29/BackupFinder&type=Date&theme=light" style="background:white;" />
 </a>
 
 ---
