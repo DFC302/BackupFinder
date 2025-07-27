@@ -14,6 +14,17 @@ Perfect for penetration testing, bug bounty hunting, and security audits.
 
 <img width="1512" height="982" alt="Screenshot 2025-07-26 at 3 20 51 AM" src="https://github.com/user-attachments/assets/2d12d61f-7747-4319-bd3a-885f68e39fb7" />
 
+## Hackerone Disclose Report 
+
+For reference, here is an H1 report showing a backup file named after the domain:
+[https://hackerone.com/reports/1516520](https://hackerone.com/reports/1516520)
+Backup file: `https://mtn.co.rw/mtn.zip`
+
+<img width="1512" height="982" alt="image" src="https://github.com/user-attachments/assets/2b0d12a6-6c4d-4add-bddb-c27e050d2d2e" />
+
+
+
+
 ## Special Thanks ❤️
 
 
